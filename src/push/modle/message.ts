@@ -45,6 +45,7 @@ export interface AndroidNotification {
     icon?: string;
     color?: string;
     sound?: string;
+    big_picture?: string;
     default_sound?:boolean;
     tag?: string;
     click_action?: ClickAction;
