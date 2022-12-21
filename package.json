@@ -1,5 +1,5 @@
 {
-    "name": "hcm-admin",
+    "name": "@wuerthcs/hcm-admin",
     "version": "0.0.2",
     "description": "HCM Node SDK.",
     "main": "./dist/index.js",
@@ -22,8 +22,5 @@
         "@types/request-promise": "^4.1.48",
         "@types/mocha": "^10.0.1",
         "mocha": "10.1.0"
-    },
-    "publishConfig": {
-        "@wuerthcs:registry": "https://npm.pkg.github.com"
     }
 }
