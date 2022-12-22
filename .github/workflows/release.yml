@@ -11,8 +11,8 @@ jobs:
       packages: write
       contents: read
     steps:
-    - name: Authenticate gh repo
-      run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.GHCR_TOKEN }}\n$(cat ~/.npmrc)" > ~/.npmrc
+      - name: Authenticate gh repo
+        run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.GHCR_TOKEN }}\n$(cat ~/.npmrc)" > ~/.npmrc
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
