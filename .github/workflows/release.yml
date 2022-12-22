@@ -18,6 +18,7 @@ jobs:
           registry-url: https://npm.pkg.github.com/
           scope: '@wuerthcs'
       - run: npm ci
+      - run: cat .npmrc
       - run: npm publish --verbose
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
