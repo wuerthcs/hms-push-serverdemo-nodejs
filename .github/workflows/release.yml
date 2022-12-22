@@ -12,13 +12,14 @@ jobs:
       contents: read
     steps:
       - name: Authenticate gh repo
-        run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.GHCR_TOKEN }}\n$(cat ~/.npmrc)" > ~/.npmrc
+        run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.GHCR_TOKEN }}\n$(cat ./.npmrc)" > ./.npmrc
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
           node-version: 14
           registry-url: https://npm.pkg.github.com/
       - run: npm ci
-      - run: npm publish
+      - run: cat .npmrc
+      - run: npm publish --verbose
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
