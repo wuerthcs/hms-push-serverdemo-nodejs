@@ -4,7 +4,6 @@
     "description": "HCM Node SDK.",
     "main": "./dist/index.js",
     "scripts": {
-        "prepare": "npm run build",
         "tsc": "tsc -w",
         "build": "tsc"
     },
